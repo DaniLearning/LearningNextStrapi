@@ -11,7 +11,7 @@ const TopicList = ({ details }) => {
             detail.main_image
               ? detail.main_image.formats.medium
                 ? detail.main_image.formats.medium.url
-                : detail.main_image.formats.small.url
+                : ""
               : null
           }
         />
