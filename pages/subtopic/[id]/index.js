@@ -7,7 +7,7 @@ import DetailList from "../../../components/details/DetailsList";
 const topic = ({ subtopics, topic, details }) => {
   //   const router = useRouter();
   //   const { id } = router.query;
-  const topicId = details[0].subtopic.topic;
+  const topicId = details[0] ? details[0].subtopic.topic : null;
   return (
     <>
       <button>
