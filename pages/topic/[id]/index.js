@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { apiServer } from "../../../config";
-import TopicList from "../../../components/topic/TopicList";
+import SubtopicList from "../../../components/topic/subtopic/SubtopicList";
 import TopicTitle from "../../../components/topic/TopicTitle";
 const topic = ({ subtopics, topic }) => {
   //   const router = useRouter();
   //   const { id } = router.query;
-  console.log(subtopics);
+  console.log(topic.id);
   return (
     <>
       <TopicTitle
@@ -14,10 +14,9 @@ const topic = ({ subtopics, topic }) => {
         second_title={topic.second_title}
         description={topic.description}
       />
-      <TopicList topics={subtopics} />
+      <SubtopicList topics={subtopics} />
 
       <br />
-      <Link href="/">Go Back</Link>
     </>
   );
 };
