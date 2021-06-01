@@ -37,7 +37,7 @@ export const getStaticProps = async (context) => {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`${apiServer}/subtopics`);
+  const res = await fetch(`${apiServer}/topics`);
   const subtopics = await res.json();
   const ids = subtopics.map((subtopic) => subtopic.id);
   const paths = ids.map((id) => ({ params: { id: id.toString() } }));

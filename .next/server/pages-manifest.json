@@ -1,7 +1,10 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
+  "/about": "pages/about.js",
+  "/api/hello": "pages/api/hello.js",
+  "/": "pages/index.js",
   "/subtopic/[id]": "pages/subtopic/[id].js",
-  "/topic/[id]": "pages/topic/[id].js"
+  "/topic/[id]": "pages/topic/[id].js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js"
 }
