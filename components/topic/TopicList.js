@@ -6,8 +6,8 @@ const TopicList = ({ topics }) => {
       {topics.map((topic) => (
         <Topic
           id={topic.id}
-          main_title={topic.main_title}
-          second_title={topic.second_title}
+          main_title={topic.main_title || topic.title}
+          second_title={topic.second_title || topic.subtitle}
           description={topic.description}
         />
       ))}
