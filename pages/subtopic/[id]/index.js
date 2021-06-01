@@ -10,9 +10,11 @@ const topic = ({ subtopics, topic, details }) => {
   const topicId = details[0].subtopic.topic;
   return (
     <>
-      <Link href="/topic/[id]" as={topicId ? `/topic/${topicId}` : "/"}>
-        go back
-      </Link>
+      <button>
+        <Link href="/topic/[id]" as={topicId ? `/topic/${topicId}` : "/"}>
+          go back
+        </Link>
+      </button>
       <DetailList details={details} />
     </>
   );
@@ -35,7 +37,7 @@ export const getStaticProps = async (context) => {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`${apiServer}/subtopics?topic.id=1`);
+  const res = await fetch(`${apiServer}/subtopics`);
   const subtopics = await res.json();
   const ids = subtopics.map((subtopic) => subtopic.id);
   const paths = ids.map((id) => ({ params: { id: id.toString() } }));

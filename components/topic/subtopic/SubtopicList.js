@@ -1,7 +1,6 @@
 import articleStyles from "../../../styles/Article.module.css";
 import Topic from "./Subtopic";
 const TopicList = ({ topics, topicId }) => {
-  console.log("id", topicId);
   return (
     <div className={articleStyles.grid}>
       {topics.map((topic) => (

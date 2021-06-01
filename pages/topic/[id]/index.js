@@ -38,16 +38,16 @@ export const getStaticProps = async (context) => {
 
 export const getStaticPaths = async () => {
   const res = await fetch(`${apiServer}/topics`);
-  const subtopics = await res.json();
-  const ids = subtopics.map((subtopic) => subtopic.id);
-  const paths2 = ids.map((id) => ({ params: { id: id.toString() } }));
+  const topics = await res.json();
+  const ids = topics.map((topic) => topic.id);
+  const paths = ids.map((id) => ({ params: { id: id.toString() } }));
   //   const paths = articles.map((article) => {
   //     params: {
   //       id: article.id.toString();
   //     }
   //   });
-  const paths = [{ params: { id: "1" } }, { params: { id: "2" } }];
-  console.log(paths);
+  // const paths = [{ params: { id: "1" } }, { params: { id: "2" } }];
+  // console.log(paths);
 
   return {
     paths,
