@@ -1,2 +1,4 @@
 const dev = process.env.NODE_ENV !== "production";
-export const apiServer = dev ? "http://localhost:1337" : "0.0.0.0";
+export const apiServer = dev
+  ? "https://polar-sands-85300.herokuapp.com/"
+  : "https://polar-sands-85300.herokuapp.com/";
