@@ -7,14 +7,13 @@ const TopicList = ({ details }) => {
         <Detail
           title={detail.title}
           description={detail.content}
-          image_url=""
-          // {
-          //   detail.main_image
-          //     ? detail.main_image.formats.medium
-          //       ? detail.main_image.formats.medium.url
-          //       : detail.main_image.formats.small.url
-          //     : null
-          // }
+          image_url={
+            detail.main_image
+              ? detail.main_image.formats.medium
+                ? detail.main_image.formats.medium.url
+                : detail.main_image.formats.small.url
+              : null
+          }
         />
       ))}
     </div>
