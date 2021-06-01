@@ -7,7 +7,7 @@ const about = () => {
         <title>About Cork</title>
         <meta name="keywords" content="city, about, Cork " />
       </head>
-      <h1>We are learning Next.js</h1>
+      <h1>We are learning about Cork and the awesome World</h1>
     </div>
   );
 };
