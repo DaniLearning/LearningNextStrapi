@@ -6,9 +6,7 @@ import { apiServer } from "../../config";
 const Topic = ({ id, title, description, image_url }) => {
   return (
     <div key="id" className={Image.detail}>
-      {image_url && (
-        <img className={Image.image} src={apiServer + image_url} alt="" />
-      )}
+      {image_url && <img className={Image.image} src={image_url} alt="" />}
 
       <a className={ArticleStyles.cardDetail}>
         <h1 className={headerStyles.title}>
