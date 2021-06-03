@@ -1,19 +1,27 @@
 import ArticleList from "../components/ArticleList";
 import TopicList from "../components/topic/TopicList";
 import Head from "next/head";
-import Image from "next/image";
+// import Image from "next/image";
 import { apiServer } from "../config";
+import Image from "../styles/Image.module.css";
 // import styles from "../styles/Home.module.css";
 
 export default function Home({ topics }) {
   return (
-    <div>
+    <div style="background-image: url('img_girl.jpg');">
       <Head>
         <title>Cork</title>
         <meta name="keywords" content="city, Cork " />
       </Head>
       {/* <ArticleList articles={articles} /> */}
       {}
+
+      <img
+        className={Image.image}
+        src="https://images.ireland.com/media/Images/Cork/678e8911f10e44ac82be216e913b4aa2.jpg"
+        alt=""
+      />
+
       <TopicList topics={topics} />
     </div>
   );
