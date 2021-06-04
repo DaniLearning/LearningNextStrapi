@@ -9,6 +9,9 @@ const topic = ({ subtopics, topic }) => {
   console.log(topic.id);
   return (
     <>
+      <button>
+        <Link href="/">go back</Link>
+      </button>
       <TopicTitle
         main_title={topic.main_title}
         second_title={topic.second_title}
